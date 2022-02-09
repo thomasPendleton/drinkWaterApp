@@ -31,5 +31,4 @@ function highlightCups(index) {
 
 function updateBigCup() {
   const fullCups = document.querySelectorAll('.small-cup.drank').length
-  
 }
