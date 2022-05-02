@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,300&display=swap');
 :root {
-  --border-color: darkblue;
+  --border-color: #144fc6;
+  --fill-color: #6ab3f8;
 }
 
 * {
@@ -13,104 +14,91 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  background-color: dodgerblue;
+  background-color: #3494e4;
   color: white;
-}
-body h2 {
-  margin: 0 0 50px 0;
-}
-.container {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* background-color: darkgoldenrod; */
+  margin-bottom: 40px;
 }
 
-.large-cup {
+h1 {
+  margin: 10px 0 0;
+}
+
+h3 {
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+.cup {
+  background-color: white;
   border: 4px solid var(--border-color);
   color: var(--border-color);
-  border-radius: 0 0 20% 20%;
+  border-radius: 0 0 40px 40px;
+  height: 330px;
+  width: 150px;
+  margin: 30px 0;
   display: flex;
   flex-direction: column;
-  height: 350px;
-  width: 200px;
   overflow: hidden;
-  background-color: rgba(208, 232, 255, 0.3);
+}
+
+.cup.cup-small {
+  height: 95px;
+  width: 50px;
+  border-radius: 0 0 15px 15px;
+  background-color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 5px;
+  transition: 0.3s ease;
+}
+
+.cup.cup-small.full {
+  background-color: var(--fill-color);
+  color: white;
+}
+
+.cups {
+  display: flex;
+  flex-wrap: wrap;
+  width: 280px;
+  align-items: center;
+  justify-content: center;
 }
 
 .remained {
   display: flex;
-  background-color: red;
-  justify-content: center;
   align-items: center;
-  flex-direction: column;
+  justify-content: center;
   text-align: center;
+  flex-direction: column;
   flex: 1;
   transition: 0.3s ease;
+}
+
+.remained span{
   font-size: 20px;
+  font-weight: bold;
+}
+
+remained small {
+  font-size: 12px;
 }
 
 .percentage {
+  background-color: var(--fill-color);
+  font-size: 30px;
   display: flex;
-  background-color: rgba(208, 232, 255);
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  font-size: 30px;
-  height: 20%;
+  height: 0;
   transition: 0.3s ease;
 }
 
 .text {
   text-align: center;
-}
-
-.large-cup h3,
-.large-cup p {
-  margin: 0;
-  color: var(--border-color);
-}
-
-.cup-group {
-  display: flex;
-  justify-content: space-around;
-
-  width: 57%;
-  flex-wrap: wrap;
-}
-.small-cup {
-  overflow: hidden;
-  cursor: pointer;
-  border: 2px solid var(--border-color);
-  border-radius: 0 0 20% 20%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(
-    to top,
-    rgba(208, 232, 255) 90%,
-    rgba(208, 232, 255, 0.3) 0%
-  );
-  height: 70px;
-  width: 50px;
-  margin-bottom: 15px;
-  color: var(--border-color);
-  transition: 0.3s ease;
-}
-
-.small-cup p {
-  margin: 0 auto;
-}
-
-.drank {
-  background: rgba(208, 232, 255, 0.3);
-}
-
-@media (max-width: 400px) {
-  .container {
-    font-size: 0.95rem;
-  }
+  margin: 0 0 5px;
 }
